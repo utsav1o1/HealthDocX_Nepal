@@ -50,9 +50,10 @@ const categoryIcons: Record<string, any> = {
 
 const quickActionLinks = [
   { href: '/upload', icon: Upload, label: 'Upload Document', desc: 'Add a new record', gradient: 'from-brand-500 to-violet-500' },
-  { href: '/documents', icon: FileText, label: 'All Documents', desc: 'Browse your vault', gradient: 'from-teal-500 to-emerald-500' },
+  { href: '/dashboard/insights', icon: TrendingUp, label: 'Health Insights', desc: 'View your trends', gradient: 'from-blue-500 to-indigo-500' },
+  { href: '/donation', icon: Heart, label: 'Donation', desc: 'Keep us online', gradient: 'from-rose-500 to-orange-500' },
   { href: '/timeline', icon: Clock, label: 'Health Timeline', desc: 'View your journey', gradient: 'from-violet-500 to-purple-500' },
-  { href: '/family', icon: Users, label: 'Family Profiles', desc: 'Manage members', gradient: 'from-amber-500 to-orange-500' },
+  { href: '/family', icon: Users, label: 'Family Profiles', desc: 'Manage members', gradient: 'from-teal-500 to-emerald-500' },
 ];
 
 export default function DashboardPage() {

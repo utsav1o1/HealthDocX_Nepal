@@ -41,11 +41,11 @@ export const authOptions: AuthOptions = {
     }),
     ...(process.env.GOOGLE_CLIENT_ID
       ? [
-          GoogleProvider({
-            clientId: process.env.GOOGLE_CLIENT_ID!,
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
-          }),
-        ]
+        GoogleProvider({
+          clientId: process.env.GOOGLE_CLIENT_ID!,
+          clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+        }),
+      ]
       : []),
   ],
   callbacks: {
@@ -70,6 +70,7 @@ export const authOptions: AuthOptions = {
         const dbUser = await User.findOne({ email: user.email });
         if (dbUser) {
           token.id = dbUser._id.toString();
+          token.role = dbUser.role || 'user';
         }
       }
       return token;
@@ -77,6 +78,7 @@ export const authOptions: AuthOptions = {
     async session({ session, token }) {
       if (session.user) {
         (session.user as any).id = token.id;
+        (session.user as any).role = token.role;
       }
       return session;
     },

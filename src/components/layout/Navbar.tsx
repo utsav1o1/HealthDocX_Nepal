@@ -46,6 +46,7 @@ export default function Navbar() {
       { href: '/documents', label: t.nav.documents, icon: FileText },
       { href: '/timeline', label: t.nav.timeline, icon: Clock },
       { href: '/family', label: t.nav.family, icon: Users },
+      { href: '/donation', label: 'Donation', icon: Heart },
     ]
     : [
       { href: '/', label: t.nav.home, icon: Heart },

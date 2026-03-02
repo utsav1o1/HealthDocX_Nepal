@@ -7,6 +7,7 @@ const UserSchema = new Schema(
     password: { type: String },
     image: { type: String, default: '' },
     provider: { type: String, default: 'credentials' },
+    role: { type: String, enum: ['user', 'admin'], default: 'user' },
   },
   { timestamps: true }
 );

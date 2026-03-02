@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import authOptions from '@/lib/auth';
-import { analyzeDocument } from '@/lib/gemini';
+import { analyzeDocument } from '@/lib/groq';
 import dbConnect from '@/lib/mongodb';
 import DocumentModel from '@/models/Document';
 

@@ -92,11 +92,17 @@ export default function Footer() {
                 Contact Us
               </Link>
               {[
-                'Privacy Policy',
-                'Terms of Service',
-                'HIPAA Compliance',
+                { href: '/privacy', label: 'Privacy Policy' },
+                { href: '/terms', label: 'Terms of Service' },
+                { href: '/hipaa', label: 'HIPAA Compliance' },
               ].map((item) => (
-                <span key={item} className="text-sm text-surface-400 cursor-default">{item}</span>
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="text-sm text-surface-500 hover:text-brand-500 dark:hover:text-brand-400 transition-colors duration-200"
+                >
+                  {item.label}
+                </Link>
               ))}
             </div>
           </div>
