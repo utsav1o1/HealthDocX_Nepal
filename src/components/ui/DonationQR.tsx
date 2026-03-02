@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Heart, Coffee, QrCode, ExternalLink } from 'lucide-react';
+import { Heart, Coffee, QrCode, Download } from 'lucide-react';
 
 interface DonationQRProps {
     title?: string;
@@ -59,10 +59,14 @@ export default function DonationQR({
             </div>
 
             <div className="space-y-3">
-                <button className="w-full btn-primary py-3 flex items-center justify-center gap-2">
-                    <ExternalLink className="w-4 h-4" />
+                <a
+                    href="/donation-qr.png"
+                    download="HealthDocX-Donation-QR.png"
+                    className="w-full btn-primary py-3 flex items-center justify-center gap-2 text-center"
+                >
+                    <Download className="w-4 h-4" />
                     Download QR Code
-                </button>
+                </a>
                 <p className="text-[10px] text-surface-400 uppercase tracking-widest font-bold">
                     100% of funds go to server costs
                 </p>

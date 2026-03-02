@@ -409,7 +409,7 @@ export default function AboutPage() {
                     </label>
                     <input
                       type="email"
-                      placeholder="ram@example.com"
+                      placeholder="utsavkarki244@gmail.com"
                       className="input-field"
                     />
                   </div>

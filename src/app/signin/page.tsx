@@ -71,13 +71,16 @@ export default function SignInPage() {
                 We are a non-profit passion project. Your support helps us provide high-speed AI analysis and secure storage for thousands of Nepalis.
               </p>
 
-              <div className="flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-surface-900/50 border border-surface-100 dark:border-surface-800">
-                <div className="w-16 h-16 rounded-xl bg-surface-100 dark:bg-surface-800 flex items-center justify-center">
-                  <QrCode className="w-10 h-10 text-surface-300" />
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-white dark:bg-surface-900/50 border border-surface-100 dark:border-surface-800 group transition-all hover:border-brand-500/30">
+                <div className="w-20 h-20 rounded-xl bg-white flex items-center justify-center border border-surface-100 p-1.5 overflow-hidden">
+                  <img src="/donation-qr.png" alt="Donation QR" className="w-full h-full object-contain" />
                 </div>
                 <div>
                   <div className="text-sm font-bold text-surface-900 dark:text-white uppercase tracking-wider">Project Fund</div>
-                  <div className="text-xs text-surface-500 mt-0.5">Scan to support via eSewa / Khalti</div>
+                  <div className="text-xs text-surface-500 mt-0.5 font-medium">Scan to support HealthDocX</div>
+                  <Link href="/donation" className="text-[10px] text-brand-500 font-bold uppercase tracking-widest mt-2 flex items-center gap-1 hover:gap-2 transition-all">
+                    View Details <ArrowRight className="w-3 h-3" />
+                  </Link>
                 </div>
               </div>
             </div>

@@ -146,7 +146,7 @@ export default function ContactPage() {
                                         <label className="block text-sm font-semibold text-surface-700 dark:text-surface-300 mb-2">
                                             Email Address <span className="text-rose-500">*</span>
                                         </label>
-                                        <input type="email" placeholder="ram@example.com" className="input-field" required />
+                                        <input type="email" placeholder="utsavkarki244@gmail.com" className="input-field" required />
                                     </div>
                                 </div>
                                 <div>
