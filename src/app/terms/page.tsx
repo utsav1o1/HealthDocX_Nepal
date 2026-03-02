@@ -80,7 +80,7 @@ export default function TermsPage() {
 
                         <div className="pt-8 border-t border-surface-200 dark:border-surface-800">
                             <p className="text-sm text-surface-500 italic">
-                                Last Updated: March 2, 2026. For legal inquiries, contact legal@healthdocx.com.np
+                                Last Updated: March 2, 2026. For legal inquiries, contact utsavkarki244@gmail.com
                             </p>
                         </div>
                     </motion.div>

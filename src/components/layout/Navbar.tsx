@@ -50,6 +50,7 @@ export default function Navbar() {
     ]
     : [
       { href: '/', label: t.nav.home, icon: Heart },
+      { href: '/donation', label: 'Donation', icon: Heart },
       { href: '/about', label: t.nav.about, icon: FileText },
       { href: '/contact', label: 'Contact', icon: Globe },
     ];

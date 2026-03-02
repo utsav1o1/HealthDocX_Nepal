@@ -350,7 +350,7 @@ export default function AboutPage() {
                 {
                   icon: Mail,
                   title: 'Email Us',
-                  value: 'hello@healthdocx.com.np',
+                  value: 'utsavkarki244@gmail.com',
                   sub: 'We respond within 24 hours',
                 },
                 {

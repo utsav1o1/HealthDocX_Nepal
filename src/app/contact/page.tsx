@@ -205,7 +205,7 @@ export default function ContactPage() {
                                 <p className="text-sm text-surface-500 leading-relaxed mb-4">
                                     Are you a hospital, clinic, or NGO in Nepal? We&apos;d love to partner with you to bring digital health records to more Nepalis.
                                 </p>
-                                <a href="mailto:partnerships@healthdocx.com.np" className="btn-secondary text-sm">
+                                <a href="mailto:utsavkarki244@gmail.com" className="btn-secondary text-sm">
                                     <Mail className="w-4 h-4" />
                                     Email Partnerships Team
                                 </a>

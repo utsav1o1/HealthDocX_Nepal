@@ -30,15 +30,29 @@ export default function DonationQR({
                 {description}
             </p>
 
-            <div className="relative group bg-white p-4 rounded-2xl border-2 border-surface-100 dark:border-surface-800 mb-8 overflow-hidden">
+            <div className="relative group bg-white p-6 rounded-[2rem] border-2 border-surface-100 dark:border-surface-800 shadow-inner group mb-8 overflow-hidden">
                 <div className="absolute inset-0 bg-brand-500/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-                {/* Placeholder QR - In a real app this would be a real payment QR */}
-                <div className="aspect-square bg-surface-50 dark:bg-surface-900 rounded-lg flex items-center justify-center border border-surface-100 dark:border-surface-800">
-                    <QrCode className="w-32 h-32 text-surface-300 dark:text-surface-700" />
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                        <span className="bg-brand-500 text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5">
-                            <Coffee className="w-3.5 h-3.5" />
-                            Scan for eSewa / Khalti
+
+                {/* QR Code Holder - The user should place the QR image in public/donation-qr.png */}
+                <div className="aspect-square bg-white rounded-2xl flex items-center justify-center border border-surface-100 dark:border-surface-800 p-2 relative">
+                    <img
+                        src="/donation-qr.png"
+                        alt="Nabil Bank QR Code"
+                        className="w-full h-full object-contain rounded-xl"
+                        onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                            e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                        }}
+                    />
+                    <div className="hidden flex-col items-center justify-center text-surface-300 dark:text-surface-700">
+                        <QrCode className="w-40 h-40 mb-2" />
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-surface-400">QR Image Missing</span>
+                    </div>
+
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-brand-500/10 backdrop-blur-[2px] rounded-2xl">
+                        <span className="bg-brand-500 text-white text-xs font-bold px-4 py-2 rounded-full flex items-center gap-2 shadow-lg scale-90 group-hover:scale-100 transition-transform">
+                            <Coffee className="w-4 h-4 text-teal-300" />
+                            Official Project Fund
                         </span>
                     </div>
                 </div>
