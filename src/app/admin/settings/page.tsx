@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { ApiConfig } from '@/models/ApiConfig';
 import dbConnect from '@/lib/mongodb';
 import { revalidatePath } from 'next/cache';
